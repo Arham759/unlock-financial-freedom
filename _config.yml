@@ -1,0 +1,27 @@
+title: Unlock Financial Freedom
+description: Practical money moves, side income ideas, and real-world finance for people starting from zero.
+url: "https://Arham759.github.io"
+baseurl: "/unlock-financial-freedom"
+
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

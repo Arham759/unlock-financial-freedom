@@ -1,0 +1,21 @@
+---
+layout: default
+title: Home
+---
+<section class="intro">
+  <h1 class="intro__title">A running ledger of practical money moves.</h1>
+  <p class="intro__dek">{{ site.description }}</p>
+</section>
+
+<section class="ledger">
+  {% for post in site.posts %}
+  <a class="entry" href="{{ post.url | relative_url }}">
+    <span class="entry__no">{{ forloop.rindex | prepend: '000' | slice: -3, 3 }}</span>
+    <span class="entry__main">
+      <span class="entry__title">{{ post.title }}</span>
+      <span class="entry__dek">{{ post.excerpt | strip_html | truncate: 140 }}</span>
+    </span>
+    <span class="entry__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </a>
+  {% endfor %}
+</section>
