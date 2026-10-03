@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="post__date">{{ page.date | date: "%B %-d, %Y" }}</p>
+  <h1 class="post__title">{{ page.title }}</h1>
+  {% if page.excerpt and page.description == nil %}
+  <p class="post__dek">{{ page.excerpt | strip_html }}</p>
+  {% endif %}
+  {% include ad-native.html %}
+  <div class="post__body">
+    {{ content }}
+  </div>
+  {% include ad-native.html %}
+  <div class="post__foot">
+    <a class="post__back" href="{{ "/" | relative_url }}">&larr; Back to all entries</a>
+  </div>
+</article>
