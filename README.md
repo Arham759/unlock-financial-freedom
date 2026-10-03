@@ -48,6 +48,13 @@ All 5 of your Adsterra units have placeholder slots wired in — just uncomment 
 
 Each file has the real Adsterra script structure commented out — swap in your actual `key`/script URLs from your Adsterra dashboard and uncomment.
 
+## Google AdSense
+1. Apply at google.com/adsense with your live site URL — approval requires original content (you have plenty) and no policy violations
+2. Once approved, Google gives you a publisher ID (`ca-pub-XXXXXXXXXX`) and an exact `ads.txt` line
+3. Paste your publisher ID into `_includes/adsense.html` and `_includes/ad-adsense-display.html`, uncomment both
+4. Replace the placeholder comment in `ads.txt` with the real line Google gives you
+5. Running AdSense alongside Adsterra is allowed, but keep an eye on total ad density per page — AdSense's policies penalize pages that feel ad-heavy, so don't enable every ad unit at once if pages start looking cluttered
+
 ## After going live
 - Submit the new domain/sitemap to Google Search Console as a new property
 - Set up 301 redirects from old Blogger URLs if migrating existing posts
